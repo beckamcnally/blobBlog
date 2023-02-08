@@ -4,6 +4,7 @@ const userPosts = require('./userPosts')
 
 // What belongs to what
 // posts belong to users and users can have many posts
+// comments belong to posts and to users 
 
 
 
