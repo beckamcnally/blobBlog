@@ -1,9 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Posts = require('./Posts')
+const Users = require('./Users')
 
 class Comments extends Model {}
 
-Posts.init(
+Comments.init(
   {
     // add columns comments are going to need id and commentContent 
     id: {
@@ -32,15 +34,14 @@ Posts.init(
           unique: false
         }
       }
-  },
-  
+  }, 
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'posts',
+    modelName: 'comments',
 }
 );
 
-module.exports = Posts;
+module.exports = Comments;
