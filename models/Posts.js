@@ -6,8 +6,21 @@ class Posts extends Model {}
 Posts.init(
   {
     // add columns posts are going to need id and content and title
-  },
-  
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    title: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    }
+},
   {
     sequelize,
     timestamps: false,
