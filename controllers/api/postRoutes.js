@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Posts } = require('../../models');
+const { Users, Posts, Comments } = require('../../models');
 
 
-
-// the home page is going to need all the posts GET all from all users
-
+// Use withAuth middleware to prevent access to route
 // the user page is going need all the posts that belong to them GET all for that user
+
+//create a new post
 
 // if the user wants to edit their post UPDATE
 

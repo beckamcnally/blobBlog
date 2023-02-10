@@ -1,7 +1,9 @@
-{{#each ___}}
+{{#each profilePosts as |pPost|}}
 <div>
-  <h2>{{}}</h2>
+  <h2>{{pPost.title}}</h2>
 </div>
 {{/each}}
 
 <button>Create Post</button>
+
+<script src="./js/profile.js"></script>
