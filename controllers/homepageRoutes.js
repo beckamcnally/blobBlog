@@ -19,6 +19,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/login', (req, res) => {
+  res.render('login')
+});
+
+router.get('/signup', (req, res) => {
+  res.render('signup')
+});
+
 router.get('/profile', async (req, res) => {
   try {
     const postData = await Posts.findAll({
@@ -36,4 +44,6 @@ router.get('/profile', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 module.exports = router;
