@@ -1,9 +1,9 @@
-{{#each _____}}
+{{#each posts}}
 <div>
   <div>
-    <h2>{{}}</h2>
-    <p>Posted By {{}} on {{}}</p>
+    <h2>{{posts.title}}</h2>
+    <p>Posted By {{post.user.userName}} on {{post.date}}</p>
   </div>
-  <div>{{}}</div>
+  <div>{{post.content}}</div>
 </div>
 {{/each}}
