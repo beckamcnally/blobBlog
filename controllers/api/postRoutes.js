@@ -6,7 +6,7 @@ const { Users, Posts, Comments } = require('../../models');
 // the user page is going need all the posts that belong to them GET all for that user
 
 //create a new post 
-  router.post("/post", async (req, res) => {
+  router.post("/", async (req, res) => {
 
     console.log(req.body)
     console.log(req.body.title)
@@ -23,7 +23,7 @@ const { Users, Posts, Comments } = require('../../models');
   });
   
 // if the user wants to edit their post UPDATE
-  router.put("/id", async (req, res) => {
+  router.put("/edit", async (req, res) => {
     try {
       const PostData = await Posts.update(req,body, {
         where: {
@@ -37,7 +37,13 @@ const { Users, Posts, Comments } = require('../../models');
   });
 
 
+router.delete('/delete', async (req, res) => {
+  try {
 
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
 // if the user want to delete one of their posts DELETE - if a post is deleted then the comments will need to also be deleted but
 
 module.exports = router;

@@ -1,13 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Posts = require('./Posts')
-const Users = require('./Users')
+const Users = require('./User')
 
 class Comments extends Model {}
 
 Comments.init(
   {
-    // add columns comments are going to need id and commentContent 
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,

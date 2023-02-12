@@ -1,11 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Users = require('./User')
+
 
 class Posts extends Model {}
 
 Posts.init(
   {
-    // add columns posts are going to need id and content and title
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -25,9 +26,8 @@ Posts.init(
       references: {
         model: 'user',
         key: 'id',
-        unique: false
-      },
-    },
+      }
+    }
   },
   {
     sequelize,
